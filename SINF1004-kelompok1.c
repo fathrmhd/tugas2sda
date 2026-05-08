@@ -2,7 +2,7 @@
 
 int main(){
     int v, h, n;
-
+    int tes;
     
 
 
