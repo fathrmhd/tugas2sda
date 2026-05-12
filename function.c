@@ -1,3 +1,5 @@
+#include "header.h"
+
 int readInput() {
     FILE *fp = fopen("data.txt", "r");
     if (fp == NULL) {
