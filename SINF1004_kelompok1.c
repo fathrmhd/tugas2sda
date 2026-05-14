@@ -1,9 +1,6 @@
 #include "header.h"
 
-int main(){
-    int v, h, n;
-    int tes;
-    
+int main(){    
 
 
     return 0;

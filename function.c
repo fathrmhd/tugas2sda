@@ -27,7 +27,14 @@ int readInput() {
     return 1;
 }
 
-int catatan[30][30];
+int cek_tabrakan(int v, int h, Batu *batu){
+    for(int i = 0; i < N; i++){
+        if(v >= batu[i].v1 && v <= batu[i].v2 && h >= batu[i].h1 && h <= batu[i].h2){
+            return i;
+        }
+    }
+    return -1;
+}
 
 int hitung_total_tabrakan(int v, int h, int V_max, int H_max, Batu *daftar_batu) {
     
@@ -49,5 +56,13 @@ int hitung_total_tabrakan(int v, int h, int V_max, int H_max, Batu *daftar_batu)
     } else {
         //Jika tidak menabrak, air lanjut jatuh lurus ke bawah
         return catatan[v][h] = hitung_total_tabrakan(v + 1, h, V_max, H_max, daftar_batu);
+    }
+}
+
+void reset_catatan(){
+    for(int i = 0; i < 30; i++){
+        for(int j = 0; j < 30; j++){
+            catatan[i][j] = 1;
+        }
     }
 }
