@@ -13,3 +13,4 @@ int catatan[30][30];
 int readInput();
 int cek_tabrakan(int v, int h, Batu *batu);
 int hitung_total_tabrakan(int v, int h, int V_max, int H_max, Batu *daftar_batu);
+void reset_catatan();
