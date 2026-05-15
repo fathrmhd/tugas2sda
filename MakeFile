@@ -1,1 +1,0 @@
-gcc -Wall -o app SINF1004-kelompok1.c
